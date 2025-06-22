@@ -20,8 +20,9 @@ This project is a tool for using neural networks through the Open AI API. To get
 
 **Note:** The code can only be used with mention of this developer. 📝
 ## How using?
-``bash
+```bash
   git@github.com:RestlessByte/usingOpenAI.git && cd usingOpenAI
   mv $pwd.env.example .env
+  ```
 ---
 Thank you for using our project! 😊

@@ -69,7 +69,7 @@ export const usingOpenAI = async (
       const response = await new OpenAI({
         apiKey: token,
         baseURL: baseURL,
-        timeout: 10000,
+        timeout: 90000,
       }).chat.completions.create({
         model: props.model as string,
         messages: [

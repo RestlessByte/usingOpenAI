@@ -9,7 +9,7 @@
 ```bash
   git@github.com:RestlessByte/usingOpenAI.git && cd usingOpenAI
   mv $pwd.env.example .env
-  ```
+```
 ---
 
 Спасибо за использование нашего проекта! 😊

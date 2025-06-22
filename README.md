@@ -6,7 +6,7 @@
 
 
 ## Как использовать?
-``bash
+```bash
   git@github.com:RestlessByte/usingOpenAI.git && cd usingOpenAI
   mv $pwd.env.example .env
   ```

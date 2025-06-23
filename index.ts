@@ -16,7 +16,8 @@ export const usingOpenAI = async (
     user_prompt: string,
     system_prompt: string,
     provider: TypeProvider,
-    model: TypeModels
+    model: TypeModels,
+    stream: boolean
   }
 ): Promise<OpenAI.Chat.Completions.ChatCompletion | undefined> => {
   /**
@@ -45,7 +46,7 @@ export const usingOpenAI = async (
       {
         role: 'system_prompt',
         content: props.system_prompt
-      }], stream: true
+      }], stream: props.stream as boolean
     })
     for await (const part of response) {
       message = (part.message.content)
@@ -70,8 +71,10 @@ export const usingOpenAI = async (
         apiKey: token,
         baseURL: baseURL,
         timeout: 90000,
+
       }).chat.completions.create({
         model: props.model as string,
+        stream: props.stream as boolean,
         messages: [
           {
             role: "system", content: `${props.system_prompt}
@@ -131,6 +134,7 @@ console.log(
     system_prompt: 'Напиши просто тест',
     user_prompt: 'rewqrdwdssdffsd',
     provider: 'MistralAI',
-    model: 'mistral-large-latest'
+    model: 'mistral-large-latest',
+    stream: false
   }).then(e => e?.choices[0].message.content)
 )

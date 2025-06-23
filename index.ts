@@ -26,7 +26,11 @@ export const usingOpenAI = async (
     system_prompt: string,
     provider: TypeProvider,
     model: TypeModels,
-    stream: boolean
+    stream: boolean,
+    options?: {
+      temperature?: number
+      max_tokens?: number
+    }
   }
 ): Promise<OpenAI.Chat.Completions.ChatCompletion | undefined> => {
   /**
@@ -88,12 +92,13 @@ export const usingOpenAI = async (
           {
             role: "system", content: `${props.system_prompt}
             Твой провайдер: ${props.provider}
-            Твоя модель: ${props.model}`
+            Твоя модель: ${props.model}
+            Ты говоришь на том языке, что и пользователь`
           },
-          { role: "user", content: props.user_prompt }
+          { role: "user", content: `Запрос от пользователя - ${props.user_prompt}` }
         ],
-        temperature: 0.2,
-        max_tokens: 800
+        temperature: props?.options?.temperature || 0.2,
+        max_tokens: props?.options?.max_tokens || 800
       });
 
       console.log('Received response from API', {
@@ -145,6 +150,5 @@ console.log(
     provider: 'MistralAI',
     model: 'mistral-large-latest',
     stream: false
-  }).then(e => e?.choices[0].message.content)
   }).then(e => e?.choices[0].message.content)
 )

@@ -4,6 +4,15 @@ import { config } from 'dotenv';
 import OpenAI from 'openai';
 // import { InferenceClient } from '@huggingface/inference';
 // Load environment variables
+/**
+ * @params [example] -   await usingOpenAI({
+    system_prompt: 'Напиши просто тест',
+    user_prompt: 'rewqrdwdssdffsd',
+    provider: 'MistralAI',
+    model: 'mistral-large-latest',
+    stream: false
+  }).then(e => e?.choices[0].message.content)
+ */
 export type TypeModels = OpenAI.AllModels | `mistral-large-latest` | false
 type TypeProvider = 'MistralAI' | 'OpenAI' | 'OpenRouter' | 'Ollama' | 'HuggingFace'
 import ollama from 'ollama'
@@ -136,5 +145,6 @@ console.log(
     provider: 'MistralAI',
     model: 'mistral-large-latest',
     stream: false
+  }).then(e => e?.choices[0].message.content)
   }).then(e => e?.choices[0].message.content)
 )

@@ -1,3 +1,4 @@
+import { Mistral } from '@mistralai/mistralai';
 import { Ollama } from './../../../ollama-js/src/browser';
 // src/ai/mistral.ts
 import { config } from 'dotenv';
@@ -13,10 +14,11 @@ import OpenAI from 'openai';
     stream: false
   }).then(e => e?.choices[0].message.content)
  */
-export type TypeModels = OpenAI.AllModels | `mistral-large-latest` | false
+export type TypeModels = OpenAI.AllModels | `mistral-large-latest` | string | false
 type TypeProvider = 'MistralAI' | 'OpenAI' | 'OpenRouter' | 'Ollama' | 'HuggingFace'
 import ollama from 'ollama'
-
+import type { ChatCompletionCreateParamsBase } from 'openai/resources/chat/completions.mjs';
+import type { ChatCompletionUserMessageParam } from 'openai/resources.js';
 
 config();
 // const HugginFace = new InferenceClient()
@@ -26,10 +28,14 @@ export const usingOpenAI = async (
     system_prompt: string,
     provider: TypeProvider,
     model: TypeModels,
-    stream: boolean,
+    stream?: boolean,
     options?: {
+      apiKey?: string
       temperature?: number
       max_tokens?: number
+      model?: TypeModels
+      createParams?: ChatCompletionCreateParamsBase
+      messageParams?: ChatCompletionUserMessageParam
     }
   }
 ): Promise<OpenAI.Chat.Completions.ChatCompletion | undefined> => {
@@ -49,10 +55,10 @@ export const usingOpenAI = async (
     token = process.env.OpenRouter_TOKEN
     baseURL = 'https://openrouter.ai/api/v1'
   }
-  if (props.provider == 'Ollama' && props.model == false) {
+  if (props.provider == 'Ollama') {
     token = 'Ollama'
     const response = await ollama.chat({
-      model: 'deepseek-r1:latest', messages: [{
+      model: props.model, messages: [{
         role: 'user',
         content: props.user_prompt
       },
@@ -99,7 +105,7 @@ export const usingOpenAI = async (
         ],
         temperature: props?.options?.temperature || 0.2,
         max_tokens: props?.options?.max_tokens || 800
-      });
+      }).then(e => e);
 
       console.log('Received response from API', {
         responseId: response.id,
@@ -143,12 +149,3 @@ export const usingOpenAI = async (
       Or this provider no can this model - ${props.model}`);
   }
 };
-console.log(
-  await usingOpenAI({
-    system_prompt: 'Напиши просто тест',
-    user_prompt: 'rewqrdwdssdffsd',
-    provider: 'MistralAI',
-    model: 'mistral-large-latest',
-    stream: false
-  }).then(e => e?.choices[0].message.content)
-)

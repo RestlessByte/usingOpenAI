@@ -1,0 +1,2 @@
+/** @param [string] Get type all models from https://docs.mistral.ai/getting-started/models/models_overview/*/
+export type Mistrall_AI_TypesAllModels = 'magistral-medium-latest' | 'magistral-small-latest' | 'mistral-medium-latest' | 'mistral-large-latest' | 'pixtral-large-latest' | 'mistral-moderation-latest' | 'ministral-3b-latest' | 'ministral-8b-latest' | 'open-mistral-nemo' | 'mistral-small-latest' | 'devstral-small-latest' | 'mistral-saba-latest' | 'codestral-latest' | 'mistral-ocr-latest'

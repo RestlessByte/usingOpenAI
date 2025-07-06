@@ -8,7 +8,7 @@
 ## Как использовать?
 ```bash
   git@github.com:RestlessByte/usingOpenAI.git && cd usingOpenAI
-  mv $pwd.env.example .env
+  mv $pwd.env.example .env && code .env && bun install
 ```
 ---
 

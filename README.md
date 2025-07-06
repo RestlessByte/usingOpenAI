@@ -6,6 +6,7 @@
 
 
 ## Как использовать?
+# 1. Скачайте Пакетный Менежер **BUN** - ***https://bun.sh/***
 ```bash
   git@github.com:RestlessByte/usingOpenAI.git && cd usingOpenAI
   mv $pwd.env.example .env && code .env && bun install
@@ -20,6 +21,8 @@ This project is a tool for using neural networks through the Open AI API. To get
 
 **Note:** The code can only be used with mention of this developer. 📝
 ## How using?
+# Download Package Manager **BUN** - ***https://bun.sh/***
+
 ```bash
   git@github.com:RestlessByte/usingOpenAI.git && cd usingOpenAI
   mv $pwd.env.example .env

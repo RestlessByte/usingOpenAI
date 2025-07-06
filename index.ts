@@ -1,9 +1,15 @@
+/** @param [string] For work you need download package manager BUN  - https://bun.sh */
 // src/ai/mistral.ts
 import { config } from 'dotenv';
 import OpenAI from 'openai';
 import { InferenceClient } from '@huggingface/inference'; // Раскомментировано
 // Load environment variables
-
+/** @param [string] 
+ * List API Reference for using AI: 
+ * - FireworksAI: https://fireworks.ai/docs/getting-started/introduction
+ * MistralAI : https://docs.mistral.ai/
+ * OpenAI: https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://platform.openai.com/docs/api-reference/introduction&ved=2ahUKEwj-h8WGnaiOAxUnQlUIHfhzDEoQFnoECAwQAQ&usg=AOvVaw1FWGdJitqHBPLDIy-X7nwC
+ */
 /** @param [string] Get types all AI models */
 export type TypeModels = OpenAI.AllModels | Mistrall_AI_TypesAllModels | fireworkModels
 type TypeProvider = 'MistralAI' | 'OpenAI' | 'OpenRouter' | 'Fireworks' | 'Ollama' | 'HuggingFace'

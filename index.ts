@@ -9,11 +9,12 @@ import OpenAI from 'openai';
 
 /** @param [string] Get types all AI models */
 export type TypeModels = OpenAI.AllModels | Mistrall_AI_TypesAllModels | { other: string }
-type TypeProvider = 'MistralAI' | 'OpenAI' | 'OpenRouter' | 'Ollama' | 'HuggingFace'
+type TypeProvider = 'MistralAI' | 'OpenAI' | 'OpenRouter' | 'Fireworks' | 'Ollama' | 'HuggingFace'
 import ollama from 'ollama'
 import type { ChatCompletionCreateParamsBase } from 'openai/resources/chat/completions.mjs';
 import type { ChatCompletionUserMessageParam } from 'openai/resources.js';
 import type { Mistrall_AI_TypesAllModels } from './types/models/mistrall/type';
+import { env } from 'bun';
 
 config();
 // const HugginFace = new InferenceClient()
@@ -58,6 +59,10 @@ export const usingOpenAI = async (
   if (props.provider == 'OpenRouter') {
     token = process.env.OpenRouter_API_KEY
     baseURL = 'https://openrouter.ai/api/v1'
+  }
+  if (props.provider === 'Fireworks') {
+    token = process.env.Fireworks_API_KEY
+    baseURL = 'https://api.fireworks.ai/inference/v1/chat/completions'
   }
   if (props.provider == 'Ollama') {
     token = 'Ollama'

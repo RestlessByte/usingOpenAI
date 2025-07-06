@@ -1,5 +1,3 @@
-import { Mistral } from '@mistralai/mistralai';
-import { Ollama } from './../../../ollama-js/src/browser';
 // src/ai/mistral.ts
 import { config } from 'dotenv';
 import OpenAI from 'openai';

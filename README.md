@@ -15,6 +15,7 @@
 # Пример кода
 ```ts
  import {usingOpenAI} from './usingOpenAI/index'
+
  const response = await usingOpenAI({
     system_prompt: 'Simple  write please word 'Hi! How I can you help'',
     user_prompt: 'This test function',
@@ -38,6 +39,19 @@ This project is a tool for using neural networks through the Open AI API. To get
 ```bash
   git@github.com:RestlessByte/usingOpenAI.git && cd usingOpenAI
   mv $pwd.env.example .env && code .env && bun install
+```
+# Example code
+```ts
+ import {usingOpenAI} from './usingOpenAI/index'
+ 
+ const response = await usingOpenAI({
+    system_prompt: 'Simple  write please word 'Hi! How I can you help'',
+    user_prompt: 'This test function',
+    provider: 'MistralAI',
+    model: 'mistral-large-latest',
+    stream: false
+  })
+  return response.choices[0].message.content // Response: Hi! How I can you help? 
 ```
 ---
 Thank you for using our project! 😊

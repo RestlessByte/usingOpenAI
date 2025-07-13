@@ -1,5 +1,5 @@
 {
-  "name": "pg-dotenv-openai",
+  "name": "Integration AI in code",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {

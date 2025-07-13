@@ -12,7 +12,18 @@
   mv $pwd.env.example .env && code .env && bun install
 ```
 ---
-
+# Пример кода
+```ts
+ import {usingOpenAI} from './usingOpenAI/index'
+ const response = await usingOpenAI({
+    system_prompt: 'Simple  write please word 'Hi! How I can you help'',
+    user_prompt: 'This test function',
+    provider: 'MistralAI',
+    model: 'mistral-large-latest',
+    stream: false
+  })
+  return response.choices[0].message.content // Response: Hi! How I can you help? 
+```
 Спасибо за использование нашего проекта! 😊
 
 # 🚀 Project for Using Neural Networks via Open AI API 🚀

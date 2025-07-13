@@ -1,0 +1,16 @@
+{
+  "name": "pg-dotenv-openai",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "deepseek": "^0.0.2",
+    "dotenv": "^16.5.0",
+    "openai": "^5.6.0"
+  }
+}

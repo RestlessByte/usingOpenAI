@@ -1,23 +1,19 @@
-Copyright (c) 2025 RestlessByte
+# Custom Software License Agreement
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to use
-the Software in personal and commercial projects, subject to the following conditions:
+**Copyright (c) 2025 RestlessByte**  
+All rights reserved.
 
-1. Attribution Requirement:
-   - Clear and visible credit must be given to RestlessByte as the original author
-   - Credit must appear in both:
-     * The project's documentation (e.g. README file)
-     * Any visible UI/credits section of the final product
+## 1. Grant of License
+Subject to the terms below, RestlessByte grants you a non-exclusive, non-transferable license to:
 
-2. Distribution Restrictions:
-   - Redistribution of the original source code or modified versions is prohibited
-   - This software may not be sold as standalone product or code
-   - No relicensing under different branding
+- ✅ Use the Software in **personal and commercial projects**
+- ✅ **Modify** the Software for **private use**
+- ✅ **Integrate** the Software into end-products (including SaaS platforms)
 
-3. Commercial Use:
-   - Commercial use in end-products is permitted
-   - Integration in SaaS platforms is allowed
-   - Resale of the Software itself is expressly prohibited
+## 2. Attribution Requirements
+You must provide **clear and visible credit** to RestlessByte by including:
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND...
+1. In project documentation (e.g. README):
+   ```markdown
+   ## Credits
+   Includes software components by [RestlessByte](https://github.com/RestlessByte)

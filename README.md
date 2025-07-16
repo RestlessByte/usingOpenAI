@@ -1,5 +1,5 @@
 # 🚀 Project for Using Neural Networks via Open AI API 🚀
-## ## Link to our chat bot in Telegram with using AI Powered [***https://t.me/AIHub0_bot***]
+## Link to our chat bot in Telegram with using AI Powered [***https://t.me/AIHub0_bot***]
 
 This project is a tool for using neural networks through the Open AI API. To get started, you can deploy Ollama, HuggingFace, OpenAI Chat GPT, OpenRouter, MistralAI, and others. This logic and code were created by the developer: [https://github.com/RestlessByte](https://github.com/RestlessByte) 🌟
 

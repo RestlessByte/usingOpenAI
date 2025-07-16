@@ -12,8 +12,3 @@ Subject to the terms below, RestlessByte grants you a non-exclusive, non-transfe
 
 ## 2. Attribution Requirements
 You must provide **clear and visible credit** to RestlessByte by including:
-
-1. In project documentation (e.g. README):
-   ```markdown
-   ## Credits
-   Includes software components by [RestlessByte](https://github.com/RestlessByte)

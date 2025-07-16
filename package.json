@@ -1,7 +1,12 @@
 {
-  "name": "Integration AI in code",
+  "name": "integration-ai-in-code",
+  "version": "1.0.0",
+  "description": "AI-интеграция в код с контролем лицензии и авторства",
   "module": "index.ts",
   "type": "module",
+  "private": true,
+  "author": "Daniil Gnezdilov <youremail@example.com>",
+  "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
     "@types/bun": "latest"
   },

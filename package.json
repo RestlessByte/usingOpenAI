@@ -5,7 +5,7 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
-  "author": "Daniil Gnezdilov <youremail@example.com>",
+  "author": "RestlessByte",
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
     "@types/bun": "latest"

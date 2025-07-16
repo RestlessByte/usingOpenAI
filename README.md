@@ -11,7 +11,7 @@ Includes software components by [RestlessByte](https://github.com/RestlessByte)
 # Download Package Manager **BUN** - ***https://bun.sh/***
 
 ```bash
-  git@github.com:RestlessByte/usingOpenAI.git && cd usingOpenAI
+  git clone git@github.com:RestlessByte/usingOpenAI.git && cd usingOpenAI
   mv $pwd.env.example .env && code .env && bun install
 ```
 # Example code

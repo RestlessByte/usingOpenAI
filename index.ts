@@ -26,9 +26,9 @@ type TypeProvider = 'MistralAI' | 'OpenAI' | 'OpenRouter' | 'Fireworks' | 'Ollam
 import ollama from 'ollama'
 import type { ChatCompletionCreateParamsBase } from 'openai/resources/chat/completions.mjs';
 import type { ChatCompletionUserMessageParam } from 'openai/resources.js';
-import type { MistralAIModelsALL, Mistrall_AI_TypesAllModels } from './types/models/mistral.ai/type';
+import type { MistralAIModelsALL } from './types/models/mistral.ai/type';
 import { env } from 'bun';
-import type { fireworkModels, FireworksModelsALL } from './types/models/fireworks.ai/type';
+import type { FireworksModelsALL } from './types/models/fireworks.ai/type';
 
 config();
 const HuggingFace = new InferenceClient(); // Инициализация клиента

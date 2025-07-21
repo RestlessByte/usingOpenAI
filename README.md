@@ -1,32 +1,3 @@
-# 🚀 Проект для использования нейронных сетей через Open AI API 🚀
-## Ссылка на нашего бота в Telegram с использованием нейросетей [***https://t.me/AIHub0_bot***]
-Этот проект — инструмент для работы с нейронными сетями через Open AI API. Для начала работы вы можете развернуть Ollama, HuggingFace, OpenAI Chat GPT, OpenRouter, MistralAI и другие. Эта логика и код были созданы разработчиком: [https://github.com/RestlessByte](https://github.com/RestlessByte) 🌟
-
-**Примечание:** Код можно использовать только с упоминанием этого разработчика. 📝
-
-
-## Как использовать?
-# 1. Скачайте Пакетный Менежер **BUN** - ***https://bun.sh/***
-```bash
-  git@github.com:RestlessByte/usingOpenAI.git && cd usingOpenAI
-  mv $pwd.env.example .env && code .env && bun install
-```
----
-# Пример кода
-```ts
- import {usingOpenAI} from './usingOpenAI/index'
-
- const response = await usingOpenAI({
-    system_prompt: 'Simple  write please word 'Hi! How I can you help'',
-    user_prompt: 'This test function',
-    provider: 'MistralAI',
-    model: 'mistral-large-latest',
-    stream: false
-  })
-  return response.choices[0].message.content // Response: Hi! How I can you help? 
-```
-Спасибо за использование нашего проекта! 😊
-
 # 🚀 Project for Using Neural Networks via Open AI API 🚀
 ## ## Link to our chat bot in Telegram with using AI Powered [***https://t.me/AIHub0_bot***]
 

@@ -27,7 +27,6 @@ import ollama from 'ollama'
 import type { ChatCompletionCreateParamsBase } from 'openai/resources/chat/completions.mjs';
 import type { ChatCompletionUserMessageParam } from 'openai/resources.js';
 import type { MistralAIModelsALL } from './types/models/mistral.ai/type';
-import { env } from 'bun';
 import type { FireworksModelsALL } from './types/models/fireworks.ai/type';
 
 config();

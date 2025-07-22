@@ -85,10 +85,6 @@ export const usingOpenAI = async (
     baseURL = 'https://api.deepseek.com'
   }
   else if (props.provider === 'Ollama') {
-    /**@param [string] Download Ollama = https://ollama.com/download for using AI on you machine
-     * Recommended Nvidia GeForce RTX 3080 or CPU 12 core AMD/Intel
-     * Choices models https://ollama.com/search
-     */
     token = 'Ollama';
     const response = await ollama.chat({
       model: props.options?.model || props.model as string,
@@ -100,11 +96,19 @@ export const usingOpenAI = async (
     });
 
     let fullResponse = '';
-    for await (const part of response) {
-      fullResponse += part.message.content;
+
+    // Handle streaming response
+    if (props.stream) {
+      for await (const part of response) {
+        fullResponse += part.message.content;  // Append each content chunk
+      }
+    }
+    // Handle non-streaming response
+    else {
+      fullResponse = response.message.content;  // Directly get content
     }
 
-    // Форматируем ответ в совместимый с OpenAI формат
+    // Format response to OpenAI-compatible structure
     return {
       id: 'ollama-' + Date.now(),
       object: 'chat.completion',

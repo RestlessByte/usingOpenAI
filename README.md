@@ -8,8 +8,11 @@ This project is a tool for using neural networks through the Open AI API. To get
 # Download Package Manager **BUN** - ***https://bun.sh/***
 
 ```bash
-  git@github.com:RestlessByte/usingOpenAI.git && cd usingOpenAI
-  mv $pwd.env.example .env && code .env && bun install
+  git@github.com:RestlessByte/usingOpenAI.git 
+  cd usingOpenAI
+  mv $pwd.env.example .env 
+  code .env 
+  bun install
 ```
 # Example code
 ```ts

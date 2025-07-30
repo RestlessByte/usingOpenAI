@@ -1,15 +1,19 @@
-# 🚀 Project for Using Neural Networks via Open AI API 🚀
+# Package for integration in your project AI together Open AI API [ChatGPT, Grok, OpenRouter, DeepSeek, Ollama, Mistral and other providers] 🚀
+
 ## ## Link to our chat bot in Telegram with using AI Powered [***https://t.me/AIHub0_bot***]
 
-This project is a tool for using neural networks through the Open AI API. To get started, you can deploy Ollama, HuggingFace, OpenAI Chat GPT, OpenRouter, MistralAI, and others. This logic and code were created by the developer: [https://github.com/RestlessByte](https://github.com/RestlessByte) 🌟
+This project is a tool for using neural networks through the Open AI API. To get started, you can deploy Ollama, HuggingFace, OpenAI Chat GPT, OpenRouter, Mistral, Fireworks. This logic and code were created by the developer: [https://github.com/RestlessByte](https://github.com/RestlessByte) 🌟
 
 **Note:** The code can only be used with mention of this developer. 📝
 ## How using?
 # Download Package Manager **BUN** - ***https://bun.sh/***
 
 ```bash
-  git@github.com:RestlessByte/usingOpenAI.git && cd usingOpenAI
-  mv $pwd.env.example .env && code .env && bun install
+  git@github.com:RestlessByte/usingOpenAI.git 
+  cd usingOpenAI
+  mv $pwd.env.example .env 
+  bun install
+  code .env
 ```
 # Example code
 ```ts

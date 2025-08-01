@@ -1,14 +1,14 @@
 /** @param [string] For work you need download package manager BUN  - https://bun.sh */
 /* ---------------------------EXAMPLE---------------------------
- import {usingOpenAI} from './usingOpenAI/index'
- const response = await usingOpenAI({
-    system_prompt: 'Simple  write please word 'Hi! How I can you help'',
-    user_prompt: 'This test function',
-    provider: 'MistralAI',
-    model: 'mistral-large-latest',
-    stream: false
-  })
-  return response.choices[0].message.content -> Response: Hi! How I can you help? 
+  const response = await usingOpenAI({
+  system_prompt: 'Simple  write please word "Hi! How I can you help"',
+  user_prompt: 'This test function',
+  provider: 'Ollama',
+  model: 'deepseek-r1:latest',
+  stream: false
+})
+
+console.log(response?.choices[0].message.content)
 */// ---------------------------EXAMPLE---------------------------
 import { config } from 'dotenv';
 import OpenAI from 'openai';
@@ -92,7 +92,7 @@ export const usingOpenAI = async (
         { role: 'system', content: props.system_prompt },
         { role: 'user', content: props.user_prompt }
       ],
-      stream: props.stream as boolean
+      stream: props.stream ? false : false
     });
 
     let fullResponse = '';
@@ -224,13 +224,13 @@ export const usingOpenAI = async (
 };
 
 /* ---------------------------EXAMPLE---------------------------
- import {usingOpenAI} from './usingOpenAI/index'
- const response = await usingOpenAI({
-    system_prompt: 'Simple  write please word 'Hi! How I can you help'',
-    user_prompt: 'This test function',
-    provider: 'MistralAI',
-    model: 'mistral-large-latest',
-    stream: false
-  })
-  return response.choices[0].message.content -> Response: Hi! How I can you help? 
+  const response = await usingOpenAI({
+  system_prompt: 'Simple  write please word "Hi! How I can you help"',
+  user_prompt: 'This test function',
+  provider: 'Ollama',
+  model: 'deepseek-r1:latest',
+  stream: false
+})
+
+console.log(response?.choices[0].message.content)
 */// ---------------------------EXAMPLE---------------------------

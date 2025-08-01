@@ -1,4 +1,4 @@
-# Package for integration in your project AI together Open AI API [ChatGPT, Grok, OpenRouter, DeepSeek, Ollama, Mistral and other providers] 🚀
+# Package for integration in your project AI together Open AI API [ChatGPT, OpenRouter, DeepSeek, Ollama, Mistral and other providers] 🚀
 
 ## ## Link to our chat bot in Telegram with using AI Powered [***https://t.me/AIHub0_bot***]
 

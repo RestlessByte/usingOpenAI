@@ -92,7 +92,7 @@ export const usingOpenAI = async (
         { role: 'system', content: props.system_prompt },
         { role: 'user', content: props.user_prompt }
       ],
-      stream: props.stream ? false : false
+      stream: props.stream as boolean || false
     });
 
     let fullResponse = '';
@@ -105,7 +105,10 @@ export const usingOpenAI = async (
     }
     // Handle non-streaming response
     else {
-      fullResponse = response.message.content;  // Directly get content
+      fullResponse = response.message.content.replace(/<think>[\s\S]*?<\/think>/g, '')  // Удалить все think-блоки
+        .replace(/^\s+|\s+$/g, '')
+        .replace(/\n{2,}/g, '\n');
+      ;  // Directly get content
     }
 
     // Format response to OpenAI-compatible structure

@@ -9,6 +9,9 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.61.0",
+    "@google/genai": "^1.17.0",
+    "cohere-ai": "^7.18.1",
     "deepseek": "^0.0.2",
     "dotenv": "^16.5.0",
     "ollama": "^0.5.16",

@@ -108,10 +108,9 @@ export const usingOpenAI = async (
     options?: UsingOptions
   }
 ): Promise<OpenAI.Chat.Completions.ChatCompletion | undefined> => {
-
+  const cfg = { provider: process.env.PROVIDER, model: process.env.MODEL_NAME }
   let token: string | undefined;
   let baseURL: string | undefined = undefined;
-
   // --- Resolve API keys + baseURLs per provider ---
   if (props.provider === 'MistralAI') {
     token = props.options?.apiKey || process.env.MistralAI_API_KEY;
@@ -194,9 +193,9 @@ export const usingOpenAI = async (
 
     // --- OpenAI-compatible chat providers ---
     const openai = new OpenAI({
-      apiKey: token,
-      baseURL,
-      timeout: 90_000,
+      apiKey: token || cfg.model,
+      baseURL: baseURL || cfg.provider,
+      timeout: 5000,
     });
 
     let response = await openai.chat.completions.create({
